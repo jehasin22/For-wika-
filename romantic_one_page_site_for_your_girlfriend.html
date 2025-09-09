@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For my only girl 💖</title>
+  <meta name="description" content="For her" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1020;
+      --fg: #ffffff;
+      --muted: #d6d6e8;
+      --accent: #ff79c6;
+      --accent-2: #8be9fd;
+      --card: rgba(255,255,255,0.10);
+      --glass: rgba(255,255,255,0.08);
+      --shadow: 0 15px 40px rgba(0,0,0,.35);
+      --radius: 20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background: radial-gradient(1200px 1200px at 10% 10%, #182044 0%, #0f1020 55%); color:var(--fg); font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;}
+    a{color:inherit}
+    .container{max-width:1100px;margin-inline:auto;padding:24px}
+
+    /* HERO */
+    header.hero{
+      min-height: 92dvh; display:grid; place-items:center; position:relative; overflow:hidden;
+    }
+    .hero-card{backdrop-filter: blur(8px); background: var(--glass); border:1px solid rgba(255,255,255,.12); box-shadow: var(--shadow); border-radius: var(--radius); padding: 28px; text-align:center}
+    .hero h1{font-family: "Playfair Display", serif; font-size: clamp(36px, 5vw, 58px); line-height:1.08; margin: 0 0 10px}
+    .hero p{color:var(--muted); margin: 0 0 18px}
+    .btn{cursor:pointer; border:0; border-radius:999px; padding:14px 22px; font-weight:700; letter-spacing:.3px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#101018; transition:.2s transform ease, .25s box-shadow ease; box-shadow:0 10px 18px rgba(255,121,198,.25)}
+    .btn:active{transform: translateY(2px)}
+
+    .now-playing{display:flex; align-items:center; gap:10px; justify-content:center; margin-top:8px; opacity:.9; font-size:14px}
+    .pulse{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(255,121,198,.7);animation:pulse 1.6s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,121,198,.6)}70%{box-shadow:0 0 0 14px rgba(255,121,198,0)}100%{box-shadow:0 0 0 0 rgba(255,121,198,0)}}
+
+    /* SECTIONS */
+    section{padding:56px 0}
+    .section-title{font-family: "Playfair Display", serif; font-size: clamp(26px, 3.5vw, 36px); margin:0 0 20px}
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius); box-shadow: var(--shadow);}
+
+    /* GALLERY */
+    .gallery{display:grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap:14px}
+    .gallery figure{margin:0; position:relative; overflow:hidden; border-radius: 16px;}
+    .gallery img{display:block; width:100%; height:220px; object-fit:cover; transform:scale(1.02); transition: .25s transform ease, .25s filter ease}
+    .gallery figure:hover img{transform:scale(1.06)}
+
+    /* Lightbox */
+    .lightbox{position:fixed; inset:0; background:rgba(10,10,20,.92); display:none; align-items:center; justify-content:center; z-index:999}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(92vw,1200px); max-height:84vh; border-radius:12px;}
+    .lightbox .nav{position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; pointer-events:none}
+    .nav button{pointer-events:auto; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); width:48px; height:48px; border-radius:999px; backdrop-filter: blur(6px); cursor:pointer}
+    .close-btn{position:absolute; top:20px; right:20px; width:42px;height:42px; border-radius:999px; background: rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); cursor:pointer}
+
+    /* LETTER */
+    .letter{padding:24px; line-height:1.7}
+    .letter p{margin:0 0 14px}
+
+    /* AUDIO */
+    .audio-wrap{display:flex; align-items:center; gap:14px; justify-content:center; flex-wrap:wrap;}
+    audio{width:min(560px, 90vw)}
+
+    /* Footer */
+    footer{padding:36px 0 60px; text-align:center; color:#bdbdde}
+
+    /* Floating hearts */
+    .heart{position:absolute; font-size:18px; opacity:.75; animation: float 8s linear infinite}
+    @keyframes float {from{transform:translateY(0) translateX(0)} to{transform:translateY(-120vh) translateX(20px)}}
+  </style>
+</head>
+<body>
+  <!--
+    ✨ КАК ИСПОЛЬЗОВАТЬ ✨
+    1) Положи свои фото в папку /images и замени src в тэге <img> ниже.
+    2) Замени файл песни: /audio/song.mp3 (или поменяй путь в <audio>).
+    3) Вставь свой текст письма в секции "Письмо".
+    4) Открой index.html в браузере — готово. Для публикации — GitHub Pages / Netlify / Vercel.
+  -->
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Good morning, my <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">lovely girl</span> 💕</h1>
+        <p>Thats what I wanna make you to remember.</p>
+        <button class="btn" id="startBtn">Press, to start</button>
+        <div class="now-playing" id="np" style="display:none"><span class="pulse"></span> Playing song for you</div>
+      </div>
+    </div>
+    <div id="hearts"></div>
+  </header>
+
+  <main>
+    <!-- AUDIO -->
+    <section class="container" id="music">
+      <h2 class="section-title">Song for u</h2>
+      <div class="card" style="padding:18px">
+        <div class="audio-wrap">
+          <!-- ЗАМЕНИ src на свою mp3/ogg ссылку или локальный файл. -->
+          <audio id="player" preload="auto" controls>
+            <source src="audio/song.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио‑плеер.
+          </audio>
+          <button class="btn" id="toggleAudio">▶️/⏸️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="container" id="gallery">
+      <h2 class="section-title">Look how beautiful u are!</h2>
+      <div class="gallery">
+        <!-- ЗАМЕНИ изображениями из папки /images -->
+        <figure><img src="images/photo1.jpg" alt="Мы 1" data-full="images/photo1.jpg"></figure>
+        <figure><img src="images/photo2.jpg" alt="Мы 2" data-full="images/photo2.jpg"></figure>
+        <figure><img src="images/photo3.jpg" alt="Мы 3" data-full="images/photo3.jpg"></figure>
+        <figure><img src="images/photo4.jpg" alt="Мы 4" data-full="images/photo4.jpg"></figure>
+        <figure><img src="images/photo5.jpg" alt="Мы 5" data-full="images/photo5.jpg"></figure>
+        <figure><img src="images/photo6.jpg" alt="Мы 6" data-full="images/photo6.jpg"></figure>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="container" id="letter">
+      <h2 class="section-title">Letter for you</h2>
+      <article class="card letter">
+        <!-- Letter for u -->
+        <p>I want you remember once and for ever, u managed to fill my days with the sunlight, u are my sunlight!.</p>
+        <p>Thanks for everything and remember, i will be always there for you, you are never gonna be dealing with your problems or thoughts alone, I allways be ready to share them with u 💖</p>
+        <p>Your, <strong>Serhii</strong></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Made with love • © <span id="year"></span>
+  </footer>
+
+  <!-- Lightbox modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightImg" alt="Фото" />
+    <div class="nav">
+      <button id="prev" aria-label="Предыдущее">⟨</button>
+      <button id="next" aria-label="Следующее">⟩</button>
+    </div>
+    <button class="close-btn" id="close" aria-label="Закрыть">✕</button>
+  </div>
+
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const player = document.getElementById('player');
+    const np = document.getElementById('np');
+    const toggleAudio = document.getElementById('toggleAudio');
+    const galleryImgs = Array.from(document.querySelectorAll('.gallery img'));
+
+    // Autoplay must be user-initiated on mobile
+    startBtn.addEventListener('click', async () => {
+      try { await player.play(); np.style.display='flex'; } catch(e) {}
+      document.getElementById('music').scrollIntoView({behavior:'smooth'});
+    });
+
+    toggleAudio.addEventListener('click', () => {
+      if (player.paused) { player.play(); np.style.display='flex'; }
+      else { player.pause(); np.style.display='none'; }
+    });
+
+    // Floating hearts in hero
+    const heartsBox = document.getElementById('hearts');
+    function spawnHeart(){
+      const h = document.createElement('div');
+      h.className='heart';
+      h.textContent = ['💖','💗','💓','💞','💘'][Math.floor(Math.random()*5)];
+      h.style.left = Math.random()*100 + 'vw';
+      h.style.bottom = '-20px';
+      h.style.animationDuration = (6 + Math.random()*6) + 's';
+      heartsBox.appendChild(h);
+      setTimeout(()=>h.remove(), 12000);
+    }
+    setInterval(spawnHeart, 800);
+
+    // Lightbox logic
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightImg');
+    const btnPrev = document.getElementById('prev');
+    const btnNext = document.getElementById('next');
+    const btnClose = document.getElementById('close');
+    let current = 0;
+
+    function openLB(index){
+      current = index;
+      lbImg.src = galleryImgs[current].dataset.full || galleryImgs[current].src;
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden','false');
+    }
+    function closeLB(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
+    function next(){ current = (current+1) % galleryImgs.length; openLB(current); }
+    function prev(){ current = (current-1+galleryImgs.length) % galleryImgs.length; openLB(current); }
+
+    galleryImgs.forEach((img,i)=> img.addEventListener('click', ()=> openLB(i)));
+    btnNext.addEventListener('click', (e)=>{ e.stopPropagation(); next(); });
+    btnPrev.addEventListener('click', (e)=>{ e.stopPropagation(); prev(); });
+    btnClose.addEventListener('click', closeLB);
+    lb.addEventListener('click', (e)=> { if (e.target===lb) closeLB(); });
+    document.addEventListener('keydown', (e)=>{
+      if(!lb.classList.contains('open')) return;
+      if(e.key==='Escape') closeLB();
+      if(e.key==='ArrowRight') next();
+      if(e.key==='ArrowLeft') prev();
+    });
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
